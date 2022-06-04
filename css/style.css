@@ -2695,11 +2695,52 @@ img {
 }
 
 .project__descr-link {
+  position: relative;
   display: inline-block;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
   color: var(--light-violet);
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0);
+  border-bottom-width: 1px;
+  transition: color .3s ease, border-bottom-width .3s ease, border-bottom-color .3s ease;
+}
+
+.project__descr-link::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 105%;
+  top: 0;
+  left: -5px;
+  right: 0;
+  bottom: 0;
+  background-color: var(--violet-color);
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.project__descr-link:focus {
+  outline: none;
+}
+
+.project__descr-link:focus:not(:hover):not(:active) {
+  color: var(--white);
+}
+
+.project__descr-link:focus:not(:hover):not(:active)::before {
+  opacity: 1;
+}
+
+.project__descr-link:hover {
+  color: var(--violet-color);
+  border-bottom-color: var(--violet-color);
+}
+
+.project__descr-link:active {
+  color: var(--dark-violet);
+  border-bottom-color: var(--dark-violet);
 }
 
 .project__title-2 {
