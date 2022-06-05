@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="img/favicon.svg" type="image/x-icon">
+  <script defer src="scripts/smooth-scroll.js"></script>
   <script defer src="scripts/swiper-bundle.min.js"></script>
   <script defer src="scripts/simplebar.min.js"></script>
   <script defer src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
@@ -16,7 +17,6 @@
   <script defer src="scripts/map.js"></script>
   <script defer src="scripts/activate-choices.js"></script>
   <script defer src="scripts/swiper.js"></script>
-  <script defer src="scripts/inputmask.min.js"></script>
   <script defer src="scripts/just-validate.min.js"></script>
   <script defer src="scripts/choices.min.js"></script>
   <script defer src="scripts/tabs.js"></script>
@@ -35,15 +35,13 @@
       <div class="header__container-top">
         <div class="container header__block">
           <div class="header__left">
-            <div class="header__menu-wrapper" id="nav-icon-1">
+            <button class="header__burger burger">
               <span></span>
-              <span></span>
-              <span></span>
-            </div>
+            </button>
             <a class="header__logo">
               <img class="header__pic" src="img/Лого.svg" alt="Логотип">
             </a>
-            <nav class="header__nav">
+            <nav class="header__nav menu-wrap">
               <ul class="header__list">
                 <li class="header__item">
                   <a href="#about-us" class="header__link">О нас </a>
@@ -65,7 +63,7 @@
                 </li>
               </ul>
             </nav>
-            <div class="header__search-disabled">
+            <div class="header__search-disabled js-open-search">
               <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
@@ -151,14 +149,15 @@
               </li>
             </ul>
           </div>
-          <div class="header__search">
-            <svg class="header__icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+          <form action="https://jsonplaceholder.typicode.com/posts" class="header__search">
+            <button class="header__submit-btn">
+              <svg class="header__icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
               </svg>
-
+            </button>
             <input class="header__input" type="text" placeholder="Поиск по сайту">
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -187,7 +186,7 @@
       </div>
     </section>
 
-    <section class="about-us" id="about-us">
+    <section class="about-us scrollto" id="about-us">
       <div class="container">
         <h2 class="about-us__title">
           О&nbsp;нас
@@ -249,31 +248,37 @@
               <div class="swiper-wrapper">
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="1">
                   <picture class="gallery__picture">
+                    <source class="gallery__pic_tablet" srcset="img/gallery-1_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-1.jpg" alt="Картина №1">
                   </picture>
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="2">
                   <picture class="gallery__picture">
+                    <source class="gallery__pic_tablet" srcset="img/gallery-2_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-2.png" alt="Картина №2">
                   </picture>
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="3">
                   <picture class="gallery__picture">
+                    <source class="gallery__pic_tablet" srcset="img/gallery-3_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-3.png" alt="Картина №3">
                   </picture>
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="4">
                   <picture class="gallery__picture">
+                    <source class="gallery__pic_tablet" srcset="img/gallery-4_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-4.png" alt="Картина №4">
                   </picture>
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="5">
                   <picture class="gallery__picture">
+                    <source class="gallery__pic_tablet" srcset="img/gallery-5_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-5.png" alt="Картина №5">
                   </picture>
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="6">
                   <picture class="gallery__picture">
+                    <source class="gallery__pic_tablet" srcset="img/gallery-6_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-6.png" alt="Картина №6">
                   </picture>
                 </button>
@@ -965,12 +970,14 @@
             </p>
           </div>
           <div class="contacts__validate">
-            <form action="#" id="form" autocomplete="off" class="contacts__form">
+            <form action="https://jsonplaceholder.typicode.com/posts" id="form" autocomplete="off" class="contacts__form">
               <div class="contacts__container-1">
+                <div class="just-validate-error-label"></div>
                 <input type="text" class="contacts__input-name form-control" placeholder="Имя*" autocomplete="off"
                   name="name" id="name" data-validate-field="name" />
               </div>
               <div class="contacts__container-2">
+                <div class="just-validate-error-label"></div>
                 <input type="tel" class="contacts__input-telephone form-control" placeholder="Телефон*"
                   autocomplete="off" name="tel" id="tel" data-validate-field="tel" />
               </div>
