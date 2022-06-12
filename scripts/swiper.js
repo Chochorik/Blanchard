@@ -10,7 +10,6 @@ const swiper = new Swiper('.swiper-1', {
 });
 
 var GallerySwiper = new Swiper(".gallery__swiper", {
-  loop: true,
   loopFillGroupWithBlank: true,
   pagination: {
     el: ".swiper-pagination-1",

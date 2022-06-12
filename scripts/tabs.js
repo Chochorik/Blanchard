@@ -10,12 +10,6 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  $(document).ready(function(){
-    $('#nav-icon1').click(function(){
-      $(this).toggleClass('open');
-    });
-  });
-
   document.querySelectorAll('.header__dropdown').forEach(dropdown => {
     new SimpleBar(dropdown, {
       scrollbarMax: 29,
@@ -23,29 +17,45 @@ window.addEventListener('DOMContentLoaded', function () {
   })
 });
 
-tippy('#Button-1', {
+// toolype
+
+tippy('.project__tooltype', {
   content: "Пример современных тенденций - современная методология разработки",
   placement: 'top',
   theme: 'purple',
   allowHTML: true,
 });
 
-tippy('#Button-2', {
-  content: "Приятно, граждане, наблюдать, как сделанные на базе аналитические выводы вызывают у вас эмоции",
-  placement: 'top',
-  theme: 'purple',
-  allowHTML: true,
-});
-
-tippy('#Button-3', {
-  content: "В стремлении повысить качество",
-  placement: 'top',
-  theme: 'purple',
-  allowHTML: true,
-});
+// accordion
 
 (() => {
   new Accordion(".js-accordion-container", {
     openOnInit: [0]
   });
 })();
+
+
+// burger
+window.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('.burger').addEventListener('click', function() {
+    document.querySelector('.header__nav').classList.toggle('header__nav_active');
+    document.querySelector('.burger').classList.toggle('burger-active');
+  });
+
+  document.querySelectorAll('.header__item').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.querySelector('.header__nav_active').classList.remove('header__nav_active');
+      document.querySelector('.burger-active').classList.remove('burger-active');
+    });
+  });
+
+  // search
+  document.querySelector('.header__search-btn').addEventListener('click', function() {
+    document.querySelector('.header__search-tablet').classList.add('header__search-tablet_active');
+    document.querySelector('.header__search-btn').classList.add('header__search-btn_disabled');
+    document.querySelector('.header__close-btn').addEventListener('click', function() {
+      document.querySelector('.header__search-tablet').classList.remove('header__search-tablet_active');
+      document.querySelector('.header__search-btn').classList.remove('header__search-btn_disabled');
+    });
+  });
+});

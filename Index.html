@@ -36,15 +36,17 @@
         <div class="container header__block">
           <div class="header__left">
             <button class="header__burger burger">
-              <span></span>
+              <span class="burger__line-1"></span>
+              <span class="burger__line-2"></span>
+              <span class="burger__line-3"></span>
             </button>
             <a class="header__logo">
-              <img class="header__pic" src="img/Лого.svg" alt="Логотип">
+                <img class="header__pic" src="img/logotype.png" alt="Логотип">
             </a>
-            <nav class="header__nav menu-wrap">
+            <nav class="header__nav">
               <ul class="header__list">
                 <li class="header__item">
-                  <a href="#about-us" class="header__link">О нас </a>
+                  <a href="#about-us" class="header__link header__link-1">О нас </a>
                 </li>
                 <li class="header__item">
                   <a href="#gallery" class="header__link">Галерея</a>
@@ -62,14 +64,31 @@
                   <a href="#contacts" class="header__link">Контакты</a>
                 </li>
               </ul>
+              <div class="header__login-tablet" tabindex="0">
+                <a href="#" class="header__link-login header__link-login-tablet" tabindex="-1">Войти</a>
+              </div>
             </nav>
-            <div class="header__search-disabled js-open-search">
-              <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+            <button class="header__search-disabled header__search-btn">
+              <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+              </svg>
+            </button>
+            <form action="#" class="header__search-tablet">
+              <button class="header__search-disabled header__submit-btn-tablet submit-btn">
+                <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
                 </svg>
-          </div>
-            <input class="header__input header__input-search" type="text" placeholder="Поиск по сайту">
+              </button>
+              <input class="header__input header__input-search" type="text">
+              <button class="header__close-btn">
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="29.567" height="2.9567" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09326 0)" fill="white"/>
+                  <rect width="29.567" height="2.9567" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9075)" fill="white"/>
+                </svg>
+              </button>
+            </form>
           </div>
           <div class="header__login" tabindex="0">
             <a href="#" class="header__link-login" tabindex="-1">Войти</a>
@@ -149,7 +168,7 @@
               </li>
             </ul>
           </div>
-          <form action="https://jsonplaceholder.typicode.com/posts" class="header__search">
+          <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="header__search">
             <button class="header__submit-btn">
               <svg class="header__icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
@@ -186,7 +205,7 @@
       </div>
     </section>
 
-    <section class="about-us scrollto" id="about-us">
+    <section class="about-us" id="about-us">
       <div class="container">
         <h2 class="about-us__title">
           О&nbsp;нас
@@ -223,13 +242,14 @@
               </select>
             </div>
 
-            <form action="#" class="gallery__form">
+            <form action="#" class="gallery__form form" id="gallery-form">
               <div class="gallery__input">
                 <input class="gallery__checkbox" type="checkbox" name="XIX век" id="vek19">
                 <span class="gallery__span"></span>
                 <label for="vek19" class="gallery__label">XIX век</label>
               </div>
-              <div class="gallery__input"><input class="gallery__checkbox" type="checkbox" name="XX век" id="vek20">
+              <div class="gallery__input">
+                <input class="gallery__checkbox" type="checkbox" name="XX век" id="vek20">
                 <span class="gallery__span"></span>
                 <label for="vek20" class="gallery__label">XX век</label>
               </div>
@@ -241,9 +261,10 @@
             </form>
           </div>
           <div class="gallery__right">
+            <button class="swiper-button-next"></button>
+            <button class="swiper-button-prev"></button>
             <div class="gallery__swiper">
-              <button class="swiper-button-next"></button>
-              <button class="swiper-button-prev"></button>
+
               <div class="swiper-pagination-1"></div>
               <div class="swiper-wrapper">
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="1">
@@ -471,122 +492,122 @@
                   <div class="accordion__content-wrap">
                     <ul class="accordion__inner-list">
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Бенедетто ди Биндо</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Бергоньоне, Амброджо</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Биссоло, Франческо</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn tab-active" data-painter-btn="domenico" href="#nonTab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn tab-active" data-painter-btn="domenico">
                           <span class="link__text">Больтраффио, Джованни</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Бонсиньори, Франческо</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Боттичини, Рафаэлло</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Брамантино</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="domenico" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="domenico">
                           <span class="link__text">Бреа, Людовико</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Бьяджо д’Антонио Туччи</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Веккьетта</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Андреа Верроккьо</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn nonTab" data-painter-btn="domenico" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn nonTab" data-painter-btn="domenico">
                           <span class="link__text">Доменико Гирландайо</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Беноццо Гоццоли</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Граначчи, Франческо</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Грегорио ди Чекко</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="domenico" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="domenico">
                           <span class="link__text">Джованни да Удине</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Джованни ди Паоло</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Джорджоне</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Парентино, Бернардо</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="domenico" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="domenico">
                           <span class="link__text">Пезеллино</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Пьетро Перуджино</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Перуцци, Бальдассаре</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="empty">
                           <span class="link__text">Пизанелло</span>
                         </a>
                       </li>
                       <li class="accordion__item">
-                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="domenico" href="#tab">
+                        <a class="accordion__painter-link link link--text link--text-another js-tab-btn" data-painter-btn="domenico">
                           <span class="link__text">Пинтуриккьо</span>
                         </a>
                       </li>
@@ -907,10 +928,10 @@
             Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
             фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны
             с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает
-            их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <button class="project__tooltype" id="Button-1"></button> обеспечение нашей
+            их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <button class="project__tooltype" data-tippy-content="Пример современных тенденций - современная методология разработки"></button> обеспечение нашей
             деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений.
-            И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <button class="project__tooltype" id="Button-2"></button> исключительно
-            в&nbsp;разрезе маркетинговых и&nbsp;финансовых <button class="project__tooltype" id="Button-3"></button> предпосылок. Банальные, но&nbsp;неопровержимые выводы,
+            И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <button class="project__tooltype" data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитические выводы вызывают у вас эмоции"></button> исключительно
+            в&nbsp;разрезе маркетинговых и&nbsp;финансовых <button class="project__tooltype" data-tippy-content="В стремлении повысить качество"></button> предпосылок. Банальные, но&nbsp;неопровержимые выводы,
             а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые,
             в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной
             неузнаваемости. Подробнее: <a class="project__descr-link"
@@ -970,7 +991,7 @@
             </p>
           </div>
           <div class="contacts__validate">
-            <form action="https://jsonplaceholder.typicode.com/posts" id="form" autocomplete="off" class="contacts__form">
+            <form action="https://jsonplaceholder.typicode.com/posts" method="post" id="form" autocomplete="off" class="contacts__form">
               <div class="contacts__container-1">
                 <div class="just-validate-error-label"></div>
                 <input type="text" class="contacts__input-name form-control" placeholder="Имя*" autocomplete="off"
@@ -1033,7 +1054,7 @@
       <div class="container footer__container">
         <div class="footer__main">
           <a class="footer__logo">
-            <img class="footer__logo-pic" src="img/Лого.svg" alt="Логотип">
+            <img class="footer__logo-pic" src="img/logotype.png" alt="Логотип">
           </a>
           <ul class="footer__social">
             <li class="footer__item">
