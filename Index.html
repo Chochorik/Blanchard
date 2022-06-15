@@ -69,7 +69,7 @@
               </div>
             </nav>
             <button class="header__search-disabled header__search-btn">
-              <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="header__search-svg" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
               </svg>
@@ -243,21 +243,21 @@
             </div>
 
             <form action="#" class="gallery__form form" id="gallery-form">
-              <div class="gallery__input">
-                <input class="gallery__checkbox" type="checkbox" name="XIX век" id="vek19">
+              <label class="gallery__checkbox-label">
+                <input class="visually-hidden gallery__checkbox" type="checkbox" name="XIX век" id="vek19">
                 <span class="gallery__span"></span>
-                <label for="vek19" class="gallery__label">XIX век</label>
-              </div>
-              <div class="gallery__input">
-                <input class="gallery__checkbox" type="checkbox" name="XX век" id="vek20">
+                <span class="gallery__checkbox-text">XIX век</span>
+              </label>
+              <label class="gallery__checkbox-label">
+                <input class="visually-hidden gallery__checkbox" type="checkbox" name="XX век" id="vek20">
                 <span class="gallery__span"></span>
-                <label for="vek20" class="gallery__label">XX век</label>
-              </div>
-              <div class="gallery__input">
-                <input class="gallery__checkbox" type="checkbox" name="Современность" id="vek21">
+                <span class="gallery__checkbox-text">XX век</span>
+              </label>
+              <label class="gallery__checkbox-label">
+                <input class="visually-hidden gallery__checkbox" type="checkbox" name="Современность" id="vek21">
                 <span class="gallery__span"></span>
-                <label for="vek21" class="gallery__label">Современность</label>
-              </div>
+                <span class="gallery__checkbox-text">Современность</span>
+              </label>
             </form>
           </div>
           <div class="gallery__right">
@@ -269,36 +269,47 @@
               <div class="swiper-wrapper">
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="1">
                   <picture class="gallery__picture">
+                    <source class="gallery__pic_320" srcset="img/gallery-1__320.jpg" media="(max-width: 320px)">
+                    <source class="gallery__pic_768" srcset="img/gallery-1__768.jpg" media="(max-width: 768px)">
                     <source class="gallery__pic_tablet" srcset="img/gallery-1_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-1.jpg" alt="Картина №1">
                   </picture>
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="2">
                   <picture class="gallery__picture">
+                    <source class="gallery__pic_320" srcset="img/gallery-2__320.jpg" media="(max-width: 320px)">
+                    <source class="gallery__pic_768" srcset="img/gallery-2__768.jpg" media="(max-width: 768px)">
                     <source class="gallery__pic_tablet" srcset="img/gallery-2_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-2.png" alt="Картина №2">
                   </picture>
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="3">
                   <picture class="gallery__picture">
+                    <source class="gallery__pic_320" srcset="img/gallery-3__320.jpg" media="(max-width: 320px)">
+                    <source class="gallery__pic_768" srcset="img/gallery-3__768.jpg" media="(max-width: 768px)">
                     <source class="gallery__pic_tablet" srcset="img/gallery-3_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-3.png" alt="Картина №3">
                   </picture>
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="4">
                   <picture class="gallery__picture">
+                    <source class="gallery__pic_320" srcset="img/gallery-4__320.jpg" media="(max-width: 320px)">
+                    <source class="gallery__pic_768" srcset="img/gallery-4__768.jpg" media="(max-width: 768px)">
                     <source class="gallery__pic_tablet" srcset="img/gallery-4_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-4.png" alt="Картина №4">
                   </picture>
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="5">
                   <picture class="gallery__picture">
+                    <source class="gallery__pic_320" srcset="img/gallery-5__320.jpg" media="(max-width: 320px)">
+                    <source class="gallery__pic_768" srcset="img/gallery-5__768.jpg" media="(max-width: 768px)">
                     <source class="gallery__pic_tablet" srcset="img/gallery-5_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-5.png" alt="Картина №5">
                   </picture>
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="6">
                   <picture class="gallery__picture">
+                    <source class="gallery__pic_768" srcset="img/gallery-6__768.jpg" media="(max-width: 768px)">
                     <source class="gallery__pic_tablet" srcset="img/gallery-6_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-6.png" alt="Картина №6">
                   </picture>
@@ -314,9 +325,7 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z" fill="black"/>
         </svg>
-        <picture class="modal__picture modal__picture-1">
-          <img class="modal__pic-1" src="img/gallery-modal-1.jpg" alt="Картина 'Торс'">
-        </picture>
+        <img class="modal__pic-1" src="img/gallery-modal-1.jpg" alt="Картина 'Торс'">
         <div class="modal__descr">
           <p class="modal__title">Казимир Малевич</p>
           <p class="modal__name-of-picture">“Торс”</p>
@@ -330,9 +339,7 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z" fill="black"/>
         </svg>
-        <picture class="modal__picture">
-          <img src="img/gallery-modal-2.jpg" alt="Картина 'Женщина с граблаями'">
-        </picture>
+        <img class="modal__pic-1" src="img/gallery-modal-2.jpg" alt="Картина 'Женщина с граблаями'">
         <div class="modal__descr">
           <p class="modal__title">Казимир Малевич</p>
           <p class="modal__name-of-picture">“Женщина с граблями”</p>
@@ -346,9 +353,7 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z" fill="black"/>
         </svg>
-        <picture class="modal__picture modal__picture-1">
-          <img class="modal__pic-1" src="img/gallery-modal-3.jpg" alt="Картина 'Торс'">
-        </picture>
+        <img  class="modal__pic-1" src="img/gallery-modal-3.jpg" alt="Картина 'Торс'">
         <div class="modal__descr">
           <p class="modal__title">Казимир Малевич</p>
           <p class="modal__name-of-picture">“Уборка ржи”</p>
@@ -362,14 +367,12 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z" fill="black"/>
         </svg>
-        <picture class="modal__picture modal__picture-1">
-          <img class="modal__pic-1" src="img/gallery-modal-3.jpg" alt="Картина 'Уборка ржи'">
-        </picture>
+        <img class="modal__pic-1" src="img/gallery-modal-3.jpg" alt="Картина 'Уборка ржи'">
         <div class="modal__descr">
           <p class="modal__title">Казимир Малевич</p>
           <p class="modal__name-of-picture">“Уборка ржи”</p>
           <p class="modal__date">1912</p>
-          <p class="modal__description-of-picture">Образы крестьянской жизни, образы сельского труда, воплощенные художником отличаются пронзительной нотой драматизма, о котором Малевичу и в голову не приходило помышлять ранее. Одной из наиболее заметных черт его постсупрематической живописи стала безликость людей; вместо лиц и голов их корпуса увенчаны красными, черными, белыми овалами.</p>
+          <p class="modal__description-of-picture" >Образы крестьянской жизни, образы сельского труда, воплощенные художником отличаются пронзительной нотой драматизма, о котором Малевичу и в голову не приходило помышлять ранее. Одной из наиболее заметных черт его постсупрематической живописи стала безликость людей; вместо лиц и голов их корпуса увенчаны красными, черными, белыми овалами.</p>
         </div>
       </div>
       <div class="modal" data-modal="4">
@@ -378,9 +381,7 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z" fill="black"/>
         </svg>
-        <picture class="modal__picture modal__picture-1">
-          <img class="modal__pic-1" src="img/gallery-modal-4.jpg" alt="Картина 'Супрематизм'">
-        </picture>
+        <img class="modal__pic-1" src="img/gallery-modal-4.jpg" alt="Картина 'Супрематизм'">
         <div class="modal__descr">
           <p class="modal__title">Иван Васильевич Клюн</p>
           <p class="modal__name-of-picture">“Супрематизм”</p>
@@ -394,9 +395,7 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z" fill="black"/>
         </svg>
-        <picture class="modal__picture modal__picture-1">
-          <img class="modal__pic-1" src="img/gallery-modal-5.jpg" alt="Картина 'Женщина с ведрами'">
-        </picture>
+        <img class="modal__pic-1" src="img/gallery-modal-5.jpg" alt="Картина 'Женщина с ведрами'">
         <div class="modal__descr">
           <p class="modal__title">Казимир Малевич</p>
           <p class="modal__name-of-picture">“Женщина с ведрами”</p>
@@ -411,9 +410,7 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z" fill="black"/>
         </svg>
-        <picture class="modal__picture modal__picture-1">
-          <img class="modal__pic-1" src="img/gallery-modal-6.jpg" alt="Картина 'Супрематизм'">
-        </picture>
+        <img class="modal__pic-1" src="img/gallery-modal-6.jpg" alt="Картина 'Супрематизм'">
         <div class="modal__descr">
           <p class="modal__title">Казимир Малевич</p>
           <p class="modal__name-of-picture">“Супрематизм”</p>
@@ -913,6 +910,7 @@
                 </div>
               </div>
             </div>
+            <div class="events__swiper-pagination"></div>
           </div>
         </div>
       </div>
@@ -947,7 +945,7 @@
           <div class="project__swiper">
             <div class="swiper-wrapper wrapper-project">
               <a href="#" class="swiper-slide project__swiper-slide">
-                <img src="img/project-1_active.svg" alt="Компания 1" class="project__img project__img-1">
+                <img src="img/project-1_active.png" alt="Компания 1" class="project__img project__img-1">
               </a>
               <a href="#" class="swiper-slide project__swiper-slide">
                 <img src="img/project-2_active.svg" alt="Компания 2" class="project__img project__img-2">
@@ -1002,7 +1000,8 @@
                 <input type="tel" class="contacts__input-telephone form-control" placeholder="Телефон*"
                   autocomplete="off" name="tel" id="tel" data-validate-field="tel" />
               </div>
-              <button class="contacts__btn btn-primary" id="submit-btn">Заказать&nbsp;обратный&nbsp;звонок</button>
+              <button class="contacts__btn btn-primary contacts__btn-desktop" id="submit-btn">Заказать&nbsp;обратный&nbsp;звонок</button>
+              <button class="btn-primary-mobile" id="submit-btn-2">Заказать</button>
             </form>
           </div>
           <div class="contacts__social">

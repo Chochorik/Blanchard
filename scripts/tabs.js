@@ -40,22 +40,41 @@ window.addEventListener('DOMContentLoaded', function () {
   document.querySelector('.burger').addEventListener('click', function() {
     document.querySelector('.header__nav').classList.toggle('header__nav_active');
     document.querySelector('.burger').classList.toggle('burger-active');
+    document.body.classList.toggle('scroll-lock');
   });
 
   document.querySelectorAll('.header__item').forEach(function(link) {
     link.addEventListener('click', function() {
       document.querySelector('.header__nav_active').classList.remove('header__nav_active');
       document.querySelector('.burger-active').classList.remove('burger-active');
+      document.body.classList.remove('scroll-lock');
     });
   });
 
   // search
-  document.querySelector('.header__search-btn').addEventListener('click', function() {
-    document.querySelector('.header__search-tablet').classList.add('header__search-tablet_active');
-    document.querySelector('.header__search-btn').classList.add('header__search-btn_disabled');
-    document.querySelector('.header__close-btn').addEventListener('click', function() {
-      document.querySelector('.header__search-tablet').classList.remove('header__search-tablet_active');
-      document.querySelector('.header__search-btn').classList.remove('header__search-btn_disabled');
+
+
+  if (document.documentElement.clientWidth <= 890) {
+    document.querySelector('.header__search-btn').addEventListener('click', function() {
+      document.querySelector('.header__logo').classList.add('nonActive__header');
+      document.querySelector('.burger').classList.add('nonActive__header');
+      document.querySelector('.header__search-tablet').classList.add('header__search-tablet_active');
+      document.querySelector('.header__search-btn').classList.add('header__search-btn_disabled');
+      document.querySelector('.header__close-btn').addEventListener('click', function() {
+        document.querySelector('.header__search-tablet').classList.remove('header__search-tablet_active');
+        document.querySelector('.header__search-btn').classList.remove('header__search-btn_disabled');
+        document.querySelector('.header__logo').classList.remove('nonActive__header');
+        document.querySelector('.burger').classList.remove('nonActive__header');
+      });
     });
-  });
+  } else {
+    document.querySelector('.header__search-btn').addEventListener('click', function() {
+      document.querySelector('.header__search-tablet').classList.add('header__search-tablet_active');
+      document.querySelector('.header__search-btn').classList.add('header__search-btn_disabled');
+      document.querySelector('.header__close-btn').addEventListener('click', function() {
+        document.querySelector('.header__search-tablet').classList.remove('header__search-tablet_active');
+        document.querySelector('.header__search-btn').classList.remove('header__search-btn_disabled');
+      });
+    });
+  };
 });

@@ -31,6 +31,18 @@ var GallerySwiper = new Swiper(".gallery__swiper", {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 34,
+    },
+
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 38,
+    },
+
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
     }
   }
 });
@@ -39,10 +51,36 @@ var EventsSwiper = new Swiper(".events__swiper", {
   slidesPerView: 3,
   spaceBetween: 50,
   loopFillGroupWithBlank: false,
+  pagination: {
+    el: ".events__swiper-pagination",
+  },
   navigation: {
     nextEl: ".events__swiper-button-next",
     prevEl: ".events__swiper-button-prev",
   },
+
+  breakpoints: {
+    1500: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 27,
+    },
+
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+    },
+
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 15,
+    }
+  }
 });
 
 var ProjectsSwiper = new Swiper(".project__swiper", {
@@ -54,6 +92,29 @@ var ProjectsSwiper = new Swiper(".project__swiper", {
     nextEl: ".project__swiper-button-next",
     prevEl: ".project__swiper-button-prev",
   },
+
+  breakpoints: {
+    1500: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+    },
+
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 15,
+    }
+  }
 });
 
 
