@@ -27,6 +27,12 @@ var GallerySwiper = new Swiper(".gallery__swiper", {
       slidesPerGroup: 3,
     },
 
+    1010: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    },
+
     1024: {
       slidesPerView: 2,
       slidesPerGroup: 2,
@@ -42,7 +48,7 @@ var GallerySwiper = new Swiper(".gallery__swiper", {
     320: {
       slidesPerView: 1,
       slidesPerGroup: 1,
-      spaceBetween: 0,
+      spaceBetween: 15,
     }
   }
 });
