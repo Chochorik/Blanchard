@@ -3408,7 +3408,7 @@ img {
 
 @media (max-width: 1024px) {
   .container {
-    min-width: 1125px;
+    max-width: 1125px;
   }
 
   .header__left {
@@ -3831,7 +3831,7 @@ img {
 
 @media (max-width: 768px) {
   .container {
-    min-width: 768px;
+    max-width: 768px;
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -4066,9 +4066,9 @@ img {
 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 420px) {
   .container {
-    min-width: 320px;
+    max-width: 320px;
     padding-left: 15px;
     padding-right: 15px;
   }
