@@ -250,6 +250,7 @@ img {
 
 .header__login-tablet {
   display: none;
+  background-color: transparent;
 }
 
 .header__login:focus:not(:hover):not(:active)::before {
@@ -4168,7 +4169,6 @@ img {
   }
 
   .header__login-tablet {
-    background-color: transparent;
     padding: 11px 30px;
     margin: 0;
   }
