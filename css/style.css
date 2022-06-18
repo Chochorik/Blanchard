@@ -419,6 +419,10 @@ img {
   transition: color .3s ease;
 }
 
+.header__search-mobile {
+  display: none;
+}
+
 .header__input::placeholder {
   padding-bottom: 5px;
   font-weight: 400;
@@ -3851,10 +3855,6 @@ img {
     max-width: 768px;
     padding-left: 50px;
     padding-right: 50px;
-  }
-
-  .header__search-mobile {
-    display: none;
   }
 
   /* header */

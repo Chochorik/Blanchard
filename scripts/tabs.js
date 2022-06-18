@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', function () {
   // search
 
 
-  if (document.documentElement.clientWidth <= 890) {
+  if (document.documentElement.clientWidth < 890) {
     document.querySelector('.header__search-btn').addEventListener('click', function() {
       document.querySelector('.header__logo').classList.add('nonActive__header');
       document.querySelector('.burger').classList.add('nonActive__header');
