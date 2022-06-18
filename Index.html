@@ -64,10 +64,17 @@
                   <a href="#contacts" class="header__link">Контакты</a>
                 </li>
               </ul>
-              <button class="header__login-tablet" tabindex="0">
+              <button class="header__login-tablget" tabindex="0">
                 <a href="#" class="header__link-login header__link-login-tablet" tabindex="-1">Войти</a>
               </button>
             </nav>
+
+            <button class="header__search-disabled header__search-btn-mobile">
+              <svg class="header__search-svg" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+              </svg>
+            </button>
             <button class="header__search-disabled header__search-btn">
               <svg class="header__search-svg" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
@@ -94,6 +101,21 @@
             <a href="#" class="header__link-login" tabindex="-1">Войти</a>
           </div>
         </div>
+        <form action="#" class="header__search-mobile">
+          <button class="header__search-disabled header__submit-btn-tablet submit-btn">
+            <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+            </svg>
+          </button>
+          <input class="header__input header__input-search" type="text">
+          <button class="header__close-btn js-btn-close">
+            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="29.567" height="2.9567" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09326 0)" fill="white"/>
+              <rect width="29.567" height="2.9567" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9075)" fill="white"/>
+            </svg>
+          </button>
+        </form>
       </div>
       <div class="header__main-2">
         <div class="container header__bottom">
@@ -268,7 +290,7 @@
               <div class="swiper-wrapper">
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="1">
                   <picture class="gallery__picture">
-                    <source class="gallery__pic_320" srcset="img/gallery-1__320.jpg" media="(max-width: 320px)">
+                    <source class="gallery__pic_320" srcset="img/gallery-1__320.jpg" media="(max-width: 475px)">
                     <source class="gallery__pic_768" srcset="img/gallery-1__768.jpg" media="(max-width: 768px)">
                     <source class="gallery__pic_tablet" srcset="img/gallery-1_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-1.jpg" alt="Картина №1">
@@ -276,7 +298,7 @@
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="2">
                   <picture class="gallery__picture">
-                    <source class="gallery__pic_320" srcset="img/gallery-2__320.jpg" media="(max-width: 320px)">
+                    <source class="gallery__pic_320" srcset="img/gallery-2__320.jpg" media="(max-width: 475px)">
                     <source class="gallery__pic_768" srcset="img/gallery-2__768.jpg" media="(max-width: 768px)">
                     <source class="gallery__pic_tablet" srcset="img/gallery-2_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-2.png" alt="Картина №2">
@@ -284,7 +306,7 @@
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="3">
                   <picture class="gallery__picture">
-                    <source class="gallery__pic_320" srcset="img/gallery-3__320.jpg" media="(max-width: 320px)">
+                    <source class="gallery__pic_320" srcset="img/gallery-3__320.jpg" media="(max-width: 475px)">
                     <source class="gallery__pic_768" srcset="img/gallery-3__768.jpg" media="(max-width: 768px)">
                     <source class="gallery__pic_tablet" srcset="img/gallery-3_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-3.png" alt="Картина №3">
@@ -292,7 +314,7 @@
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="4">
                   <picture class="gallery__picture">
-                    <source class="gallery__pic_320" srcset="img/gallery-4__320.jpg" media="(max-width: 320px)">
+                    <source class="gallery__pic_320" srcset="img/gallery-4__320.jpg" media="(max-width: 475px)">
                     <source class="gallery__pic_768" srcset="img/gallery-4__768.jpg" media="(max-width: 768px)">
                     <source class="gallery__pic_tablet" srcset="img/gallery-4_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-4.png" alt="Картина №4">
@@ -300,7 +322,7 @@
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="5">
                   <picture class="gallery__picture">
-                    <source class="gallery__pic_320" srcset="img/gallery-5__320.jpg" media="(max-width: 320px)">
+                    <source class="gallery__pic_320" srcset="img/gallery-5__320.jpg" media="(max-width: 475px)">
                     <source class="gallery__pic_768" srcset="img/gallery-5__768.jpg" media="(max-width: 768px)">
                     <source class="gallery__pic_tablet" srcset="img/gallery-5_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-5.png" alt="Картина №5">
@@ -308,6 +330,7 @@
                 </button>
                 <button class="swiper-slide gallery__slide js-open-modal" data-modal="6">
                   <picture class="gallery__picture">
+                    <source class="gallery__pic_320" srcset="img/gallery-6_320.jpg" media="(max-width: 475px)">
                     <source class="gallery__pic_768" srcset="img/gallery-6__768.jpg" media="(max-width: 768px)">
                     <source class="gallery__pic_tablet" srcset="img/gallery-6_1024.jpg" media="(max-width: 1024px)">
                     <img class="gallery__img" src="img/gallery-6.png" alt="Картина №6">

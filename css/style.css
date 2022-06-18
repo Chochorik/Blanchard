@@ -3443,7 +3443,7 @@ img {
     bottom: 0;
     right: 0;
     width: 100vw;
-    height: 668px;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     transform: translateX(-100vw);
     transition: transform .3s ease;
@@ -3512,6 +3512,10 @@ img {
 
   .burger-fixed {
     position: fixed;
+  }
+
+  .header__search-btn-mobile {
+    display: none;
   }
 
   .burger .burger__line-1 {
@@ -3675,10 +3679,6 @@ img {
   .gallery__swiper {
     overflow: hidden;
     max-width: 594px;
-  }
-
-  .gallery__slide {
-    max-width: 280px;
   }
 
   .gallery__slide::before {
@@ -3853,6 +3853,10 @@ img {
     padding-right: 50px;
   }
 
+  .header__search-mobile {
+    display: none;
+  }
+
   /* header */
   .header__input-search {
     width: calc(100vw - 180px);
@@ -3882,10 +3886,6 @@ img {
 
   .gallery__swiper {
     max-width: 100%;
-  }
-
-  .gallery__slide {
-    min-width: 315px;
   }
 
   .swiper-pagination-1 {
@@ -4180,6 +4180,75 @@ img {
     background-position: 9px 4px;
   }
 
+  .header__input-search {
+    min-width: 140px;
+  }
+
+  .header__submit-btn-tablet svg {
+    margin-bottom: -10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .header__close-btn svg {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: -20px;
+    left: calc(calc(100vw - (100% - 25vw)));
+  }
+
+  .header__search-btn {
+    display: none;
+  }
+
+  .header__search-tablet {
+    display: none;
+  }
+
+  .header__search-mobile {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: calc(100% - 150px);
+    left: 20%;
+    right: 20%;
+    top: 50px;
+    z-index: 15;
+    transform: translateY(-100vh);
+    transition: transform .3s ease;
+  }
+
+  .header__search-mobile_active {
+    transform: translateY(0);
+  }
+
+  .header__search-mobile::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 75px;
+    top: -100%;
+    left: -100%;
+    right: calc(100% - 80vw);
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+  }
+
+  .header__search-btn-mobile {
+    display: block;
+  }
+
+  .header__search-btn-mobile svg path,
+  .header__search-btn-mobile svg rect {
+    transition: fill .2s ease;
+  }
+
+  .header__search-btn-mobile:active svg path,
+  .header__search-btn-mobile:active svg rect {
+    fill: var(--dark-violet);
+  }
+
   /* hero */
   .hero__container {
     display: flex;
@@ -4284,10 +4353,6 @@ img {
 
   .gallery__swiper .swiper-wrapper {
     margin-top: 30px;
-  }
-
-  .gallery__slide {
-    min-width: 290px;
   }
 
   .swiper-pagination-1 {

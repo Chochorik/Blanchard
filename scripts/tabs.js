@@ -77,4 +77,15 @@ window.addEventListener('DOMContentLoaded', function () {
       });
     });
   };
+
+  let btn = document.querySelector('.header__search-btn-mobile');
+  let search = document.querySelector('.header__search-mobile');
+
+  btn.addEventListener('click', function() {
+    search.classList.add('header__search-mobile_active');
+  });
+
+  document.querySelector('.js-btn-close').addEventListener('click', function() {
+    search.classList.remove('header__search-mobile_active');
+  })
 });
