@@ -1373,7 +1373,7 @@ img {
 .gallery__right-navigation {
   display: inline-flex;
   margin-bottom: 30px;
-  margin-top: 25px;
+  margin-top: 30px;
   align-items: flex-end;
 }
 
@@ -1547,12 +1547,12 @@ img {
 
 .swiper-button-prev {
   margin-left: 5px;
-  margin-right: 25px;
+  margin-right: 20px;
 }
 
 .swiper-button-next {
   left: 0;
-  margin-left: 25px;
+  margin-left: 20px;
 }
 
 .swiper-button-next::after,
@@ -3420,6 +3420,12 @@ img {
   fill: var(--violet-color);
 }
 
+
+@media (max-width: 1600px) {
+  .gallery__right {
+    width: calc(1000 / 1600 * 100%)
+  }
+}
 
 @media (max-width: 1367px) {
   .header__item-select:not(:nth-child(5n)) {
