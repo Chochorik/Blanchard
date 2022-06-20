@@ -110,7 +110,7 @@ var ProjectsSwiper = new Swiper(".project__swiper", {
       spaceBetween: 50,
     },
 
-    768: {
+    500: {
       slidesPerView: 2,
       spaceBetween: 34,
     },

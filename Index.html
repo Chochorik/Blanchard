@@ -41,7 +41,7 @@
               <span class="burger__line-3"></span>
             </button>
             <a class="header__logo">
-                <img class="header__pic" src="img/logotype.png" alt="Логотип">
+                <img class="header__pic" src="img/logotype.svg" alt="Логотип">
             </a>
             <nav class="header__nav">
               <ul class="header__list">
@@ -283,59 +283,63 @@
             </form>
           </div>
           <div class="gallery__right">
-            <button class="swiper-button-next"></button>
-            <button class="swiper-button-prev"></button>
-            <div class="swiper-pagination-1"></div>
-            <div class="gallery__swiper">
-              <div class="swiper-wrapper">
-                <button class="swiper-slide gallery__slide js-open-modal" data-modal="1">
-                  <picture class="gallery__picture">
-                    <source class="gallery__pic_320" srcset="img/gallery-1__320.jpg" media="(max-width: 475px)">
-                    <source class="gallery__pic_768" srcset="img/gallery-1__768.jpg" media="(max-width: 768px)">
-                    <source class="gallery__pic_tablet" srcset="img/gallery-1_1024.jpg" media="(max-width: 1024px)">
-                    <img class="gallery__img" src="img/gallery-1.jpg" alt="Картина №1">
-                  </picture>
-                </button>
-                <button class="swiper-slide gallery__slide js-open-modal" data-modal="2">
-                  <picture class="gallery__picture">
-                    <source class="gallery__pic_320" srcset="img/gallery-2__320.jpg" media="(max-width: 475px)">
-                    <source class="gallery__pic_768" srcset="img/gallery-2__768.jpg" media="(max-width: 768px)">
-                    <source class="gallery__pic_tablet" srcset="img/gallery-2_1024.jpg" media="(max-width: 1024px)">
-                    <img class="gallery__img" src="img/gallery-2.png" alt="Картина №2">
-                  </picture>
-                </button>
-                <button class="swiper-slide gallery__slide js-open-modal" data-modal="3">
-                  <picture class="gallery__picture">
-                    <source class="gallery__pic_320" srcset="img/gallery-3__320.jpg" media="(max-width: 475px)">
-                    <source class="gallery__pic_768" srcset="img/gallery-3__768.jpg" media="(max-width: 768px)">
-                    <source class="gallery__pic_tablet" srcset="img/gallery-3_1024.jpg" media="(max-width: 1024px)">
-                    <img class="gallery__img" src="img/gallery-3.png" alt="Картина №3">
-                  </picture>
-                </button>
-                <button class="swiper-slide gallery__slide js-open-modal" data-modal="4">
-                  <picture class="gallery__picture">
-                    <source class="gallery__pic_320" srcset="img/gallery-4__320.jpg" media="(max-width: 475px)">
-                    <source class="gallery__pic_768" srcset="img/gallery-4__768.jpg" media="(max-width: 768px)">
-                    <source class="gallery__pic_tablet" srcset="img/gallery-4_1024.jpg" media="(max-width: 1024px)">
-                    <img class="gallery__img" src="img/gallery-4.png" alt="Картина №4">
-                  </picture>
-                </button>
-                <button class="swiper-slide gallery__slide js-open-modal" data-modal="5">
-                  <picture class="gallery__picture">
-                    <source class="gallery__pic_320" srcset="img/gallery-5__320.jpg" media="(max-width: 475px)">
-                    <source class="gallery__pic_768" srcset="img/gallery-5__768.jpg" media="(max-width: 768px)">
-                    <source class="gallery__pic_tablet" srcset="img/gallery-5_1024.jpg" media="(max-width: 1024px)">
-                    <img class="gallery__img" src="img/gallery-5.png" alt="Картина №5">
-                  </picture>
-                </button>
-                <button class="swiper-slide gallery__slide js-open-modal" data-modal="6">
-                  <picture class="gallery__picture">
-                    <source class="gallery__pic_320" srcset="img/gallery-6_320.jpg" media="(max-width: 475px)">
-                    <source class="gallery__pic_768" srcset="img/gallery-6__768.jpg" media="(max-width: 768px)">
-                    <source class="gallery__pic_tablet" srcset="img/gallery-6_1024.jpg" media="(max-width: 1024px)">
-                    <img class="gallery__img" src="img/gallery-6.png" alt="Картина №6">
-                  </picture>
-                </button>
+            <div class="gallery__right-navigation">
+              <button class="swiper-button-prev gallery__swiper-btn"></button>
+              <div class="swiper-pagination-1"></div>
+              <button class="swiper-button-next gallery__swiper-btn"></button>
+            </div>
+            <div class="gallery__slides-container">
+              <div class="gallery__swiper">
+                <div class="swiper-wrapper">
+                  <button class="swiper-slide gallery__slide js-open-modal" data-modal="1">
+                    <picture class="gallery__picture">
+                      <source srcset="img/gallery-1__320.jpg" media="(max-width: 475px)">
+                      <source srcset="img/gallery-1__768.jpg" media="(max-width: 768px)">
+                      <source srcset="img/gallery-1_1024.jpg" media="(max-width: 1024px)">
+                      <img class="gallery__img" src="img/gallery-1.jpg" alt="Картина №1">
+                    </picture>
+                  </button>
+                  <button class="swiper-slide gallery__slide js-open-modal" data-modal="2">
+                    <picture class="gallery__picture">
+                      <source srcset="img/gallery-2__320.jpg" media="(max-width: 475px)">
+                      <source srcset="img/gallery-2__768.jpg" media="(max-width: 768px)">
+                      <source srcset="img/gallery-2_1024.jpg" media="(max-width: 1024px)">
+                      <img class="gallery__img" src="img/gallery-2.png" alt="Картина №2">
+                    </picture>
+                  </button>
+                  <button class="swiper-slide gallery__slide js-open-modal" data-modal="3">
+                    <picture class="gallery__picture">
+                      <source srcset="img/gallery-3__320.jpg" media="(max-width: 475px)">
+                      <source srcset="img/gallery-3__768.jpg" media="(max-width: 768px)">
+                      <source srcset="img/gallery-3_1024.jpg" media="(max-width: 1024px)">
+                      <img class="gallery__img" src="img/gallery-3.png" alt="Картина №3">
+                    </picture>
+                  </button>
+                  <button class="swiper-slide gallery__slide js-open-modal" data-modal="4">
+                    <picture class="gallery__picture">
+                      <source srcset="img/gallery-4__320.jpg" media="(max-width: 475px)">
+                      <source srcset="img/gallery-4__768.jpg" media="(max-width: 768px)">
+                      <source srcset="img/gallery-4_1024.jpg" media="(max-width: 1024px)">
+                      <img class="gallery__img" src="img/gallery-4.png" alt="Картина №4">
+                    </picture>
+                  </button>
+                  <button class="swiper-slide gallery__slide js-open-modal" data-modal="5">
+                    <picture class="gallery__picture">
+                      <source srcset="img/gallery-5__320.jpg" media="(max-width: 475px)">
+                      <source srcset="img/gallery-5__768.jpg" media="(max-width: 768px)">
+                      <source srcset="img/gallery-5_1024.jpg" media="(max-width: 1024px)">
+                      <img class="gallery__img" src="img/gallery-5.png" alt="Картина №5">
+                    </picture>
+                  </button>
+                  <button class="swiper-slide gallery__slide js-open-modal" data-modal="6">
+                    <picture class="gallery__picture">
+                      <source srcset="img/gallery-6_320.jpg" media="(max-width: 475px)">
+                      <source srcset="img/gallery-6__768.jpg" media="(max-width: 768px)">
+                      <source srcset="img/gallery-6_1024.jpg" media="(max-width: 1024px)">
+                      <img class="gallery__img" src="img/gallery-6.png" alt="Картина №6">
+                    </picture>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1075,7 +1079,7 @@
       <div class="container footer__container">
         <div class="footer__main">
           <a class="footer__logo">
-            <img class="footer__logo-pic" src="img/logotype.png" alt="Логотип">
+            <img class="footer__logo-pic" src="img/logotype.svg" alt="Логотип">
           </a>
           <ul class="footer__social">
             <li class="footer__item">
