@@ -74,7 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
       .addField('#name', [
         {
           rule: 'minLength',
-          value: 3,
+          value: 2,
+          errorMessage: 'Имя слишком короткое!',
         },
         {
           rule: 'maxLength',

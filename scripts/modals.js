@@ -1,70 +1,55 @@
-!function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
+(() => {
+  const openBtns = document.querySelectorAll('.js-open-modal-btn');
+  const overlay = document.querySelector('.js-overlay');
+  const closeBtns = document.querySelectorAll('.js-modal-close');
+  const fixedElems = document.querySelectorAll('.js-modal-fixed') // Класс js-modal-fixed добавляем на все элементы с фиксированым позиционированием
+
+  function closeModal (e) {
+      e.stopPropagation();
+
+      const isCloseClick = e.target.classList.contains('js-modal-close') || e.target.classList.contains('js-overlay');
+      const isOverlayClick = e.target.classList.contains('js-overlay');
+
+      if (isCloseClick || isOverlayClick) {
+          const modal = document.querySelector('.js-modal.open');
+          console.log(e.target)
+
+          fixedElems.forEach(el => {
+              el.style.paddingRight = '';
+          });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+          modal.classList.remove('open');
+          overlay.classList.remove('open');
 
-   /* Записываем в переменные массив элементов-кнопок и подложку.
-      Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
-   var modalButtons = document.querySelectorAll('.js-open-modal'),
-       overlay      = document.querySelector('.js-overlay-modal'),
-       closeButtons = document.querySelectorAll('.js-modal-close');
+          document.body.style.paddingRight = '';
+          document.body.classList.remove('scroll-lock');
+      }
+  }
 
+  function openModal (e) {
+      const path = e.target.dataset.modal;
+      const modal = document.querySelector(`.js-modal[data-modal=${path}]`);
+      let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
 
-   /* Перебираем массив кнопок */
-   modalButtons.forEach(function(item){
-
-      /* Назначаем каждой кнопке обработчик клика */
-      item.addEventListener('click', function(e) {
-
-         /* Предотвращаем стандартное действие элемента. Так как кнопку разные
-            люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
-            Нужно подстраховаться. */
-         e.preventDefault();
-
-         /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
-            и будем искать модальное окно с таким же атрибутом. */
-         var modalId = this.getAttribute('data-modal'),
-             modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
-
-
-         /* После того как нашли нужное модальное окно, добавим классы
-            подложке и окну чтобы показать их. */
-         modalElem.classList.add('active');
-         overlay.classList.add('active');
-      }); // end click
-
-   }); // end foreach
-
-
-   closeButtons.forEach(function(item){
-
-      item.addEventListener('click', function(e) {
-         var parentModal = this.closest('.modal');
-
-         parentModal.classList.remove('active');
-         overlay.classList.remove('active');
+      fixedElems.forEach(el => {
+          el.style.paddingRight = paddingOffset;
       });
 
-   }); // end foreach
+      document.body.style.paddingRight = paddingOffset;
+      document.body.classList.add('scroll-lock');
 
+      overlay.classList.add('open');
+      modal.classList.add('open');
+  }
 
-    document.body.addEventListener('keyup', function (e) {
-        var key = e.keyCode;
+  openBtns.forEach(btn => {
+      btn.addEventListener('click', openModal);
+  });
 
-        if (key == 27) {
+  closeBtns.forEach(btn => {
+      btn.addEventListener('click', closeModal);
+  });
 
-            document.querySelector('.modal.active').classList.remove('active');
-            document.querySelector('.overlay').classList.remove('active');
-        };
-    }, false);
-
-
-    overlay.addEventListener('click', function() {
-        document.querySelector('.modal.active').classList.remove('active');
-        this.classList.remove('active');
-    });
-
-
-
-
-}); // end ready
+  overlay.addEventListener('click', closeModal);
+})();
