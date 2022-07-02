@@ -1,3 +1,13 @@
+window.addEventListener('DOMContentLoaded', function() {
+  const element = document.querySelector('#js-choice');
+  const choices = new Choices(element, {
+    itemSelectText: '',
+    searchEnabled: false,
+    placeholder: true,
+  });
+});
+
+// дропдауны в хедере
 const params = {
   btnClassName: "js-header-dropdown-btn",
   dropClassName: "js-header-drop",
@@ -44,72 +54,28 @@ function setMenuListener() {
 }
 
 setMenuListener();
+document.querySelectorAll(".gallery-left__select").forEach(item => {
+  item.addEventListener("click", function () {
+    let btn = this;
+    let dropdown = this.parentElement.querySelector(".gallery-dropdown");
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".gallery-left__select").forEach(item => {
-    item.addEventListener("click", function () {
-      let btn = this;
-      let dropdown = this.parentElement.querySelector(".gallery-dropdown");
-
-      document.querySelectorAll(".gallery-left__select").forEach(el => {
-        if (el != btn) {
-          el.classList.remove("active-btn_gallery");
-        }
-      });
-
-      document.querySelectorAll(".gallery-dropdown").forEach(el => {
-        if (el != dropdown) {
-          el.classList.remove("active-dropdown_gallery");
-        }
-      })
-      dropdown.classList.toggle("active-dropdown_gallery");
-      btn.classList.toggle("active-btn_gallery");
-    })
-  })
-
-  window.addEventListener('DOMContentLoaded', function () {
-    const validation = new JustValidate('#form');
-
-    validation
-      .addField('#name', [
-        {
-          rule: 'minLength',
-          value: 2,
-          errorMessage: 'Имя слишком короткое!',
-        },
-        {
-          rule: 'maxLength',
-          value: 30,
-        },
-        {
-          rule: 'required',
-          errorMessage: 'Недопустимый формат',
-        },
-      ])
-      .addField('#tel', [
-        {
-          rule: 'required',
-          errorMessage: 'Введите номер телефона',
-        },
-        {
-          rule: 'minLength',
-          value: 11,
-          errorMessage: 'Неправильный номер телефона!'
-        },
-      ]);
-  });
-
-  const element = document.querySelector('#js-choice');
-    const choices = new Choices(element, {
-      itemSelectText: '',
-      searchEnabled: false,
-      placeholder: true,
+    document.querySelectorAll(".gallery-left__select").forEach(el => {
+      if (el != btn) {
+        el.classList.remove("active-btn_gallery");
+      }
     });
+
+    document.querySelectorAll(".gallery-dropdown").forEach(el => {
+      if (el != dropdown) {
+        el.classList.remove("active-dropdown_gallery");
+      }
+    })
+    dropdown.classList.toggle("active-dropdown_gallery");
+    btn.classList.toggle("active-btn_gallery");
+  });
 });
 
 // burger-menu
-
-// здесь мы определяем функцию, которая отвеает за работу меню, в ней не нужно ничего менять
 function setBurger(params) {
   const btn = document.querySelector(`.${params.btnClass}`);
   const menu = document.querySelector(`.${params.menuClass}`);

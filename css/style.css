@@ -3674,7 +3674,7 @@ img {
 
   .header__nav {
     position: fixed;
-    padding: 110px 47px 51px 50px;
+    padding: 110px 47px 51px calc(100% / 6 - 100px);
     top: 0;
     left: 0;
     bottom: 0;
@@ -4145,6 +4145,11 @@ img {
 }
 
 @media (max-width: 1023px) {
+  /* header */
+  .header__nav {
+    padding-left: 50px;
+  }
+
   /* gallery */
   .gallery__container {
     -webkit-box-orient: vertical;
