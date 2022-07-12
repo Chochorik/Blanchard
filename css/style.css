@@ -1752,8 +1752,12 @@ img {
   overflow-y: auto;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition-property: visibility, opacity;
+  -o-transition-property: visibility, opacity;
   transition-property: visibility, opacity;
-  transition-duration: .5s;
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
 }
 
 .modal-overlay.open {
@@ -1766,15 +1770,25 @@ img {
   z-index: 5;
   left: 50%;
   top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   visibility: hidden;
   max-width: calc(100% - 100px);
   width: 900px;
   background-color: #fff;
   opacity: 0;
-  transform: translate(-50%, calc(-50% + 50px));
+  -webkit-transform: translate(-50%, calc(-50% + 50px));
+      -ms-transform: translate(-50%, calc(-50% + 50px));
+          transform: translate(-50%, calc(-50% + 50px));
+  -webkit-transition-property: visibility, opacity, -webkit-transform;
+  transition-property: visibility, opacity, -webkit-transform;
+  -o-transition-property: visibility, transform, opacity;
   transition-property: visibility, transform, opacity;
-  transition-duration: .5s;
+  transition-property: visibility, transform, opacity, -webkit-transform;
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
 }
 
 .modal-close {
@@ -1797,6 +1811,8 @@ img {
 }
 
 .modal__cross path {
+  -webkit-transition: fill .3s ease;
+  -o-transition: fill .3s ease;
   transition: fill .3s ease;
 }
 
@@ -1815,7 +1831,9 @@ img {
 .modal.open {
   visibility: visible;
   opacity: 1;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .modal-image-wrap {
@@ -1831,7 +1849,8 @@ img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .modal-content {
@@ -3694,6 +3713,26 @@ img {
     transition: transform .3s ease, -webkit-transform .3s ease, opacity .3s ease;
   }
 
+  .header__item:last-child {
+    margin-bottom: 30px;
+  }
+
+  .header__list-contianer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
   .header__menu-mobile {
     overflow-y: auto;
   }
@@ -3714,9 +3753,7 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 490px;
     max-width: 150px;
-    margin-bottom: 73px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -webkit-box-orient: vertical;
@@ -3726,8 +3763,6 @@ img {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    overflow-y: auto;
-    overflow-x: hidden;
   }
 
   .header__link {
@@ -3969,6 +4004,9 @@ img {
     max-width: 925px;
   }
   /* gallery */
+  .gallery {
+    padding-bottom: 80px;
+  }
 
   .choices__inner {
     max-width: 280px;
@@ -3984,6 +4022,14 @@ img {
 
   .gallery__right {
     width: calc(1030 / 1600 * 100%)
+  }
+
+  .gallery__right-navigation {
+    margin-top: 33px;
+  }
+
+  .swiper-button-prev {
+    margin-left: 0;
   }
 
   .gallery__slide::before {
@@ -4016,6 +4062,10 @@ img {
     -webkit-column-count: 2;
        -moz-column-count: 2;
             column-count: 2;
+  }
+
+  .catalog__top {
+    margin-bottom: 40px;
   }
 
   .catalog__tab {
@@ -4082,7 +4132,11 @@ img {
 
   /* projects */
   .project__swiper {
-    max-width: 822px;
+    width: calc(1460 / 1650 * 100%);
+  }
+
+  .project__swiper-slide {
+    height: 128px;
   }
 
   .project__img-1 {
@@ -4124,6 +4178,7 @@ img {
 
   /* contacts */
   .contacts__main {
+    padding-top: 40px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -4160,6 +4215,20 @@ img {
 
   .gallery__right {
     width: 100%;
+  }
+
+
+  /* catalog */
+  .catalog__tab {
+    -webkit-transform: translateX(-500%);
+        -ms-transform: translateX(-500%);
+            transform: translateX(-500%);
+  }
+
+  .catalog__tab-active {
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 
   /* contacts */
@@ -4222,6 +4291,11 @@ img {
     font-size: calc(35px + 30 * (100vw / 768));
   }
 
+  /* about-us */
+  .about-us {
+    padding-top: 85px;
+  }
+
   /* gallery */
   .gallery__container {
     -webkit-box-orient: vertical;
@@ -4231,7 +4305,7 @@ img {
   }
 
   .gallery__select {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
   .gallery__right {
@@ -4239,7 +4313,11 @@ img {
   }
 
   .gallery__right-navigation {
-    margin-top: 50px;
+    margin-top: 45px;
+  }
+
+  .gallery__slide::before {
+    padding-top: 103%;
   }
 
   .modal {
@@ -4253,6 +4331,10 @@ img {
   /* catalog */
   .catalog {
     padding-bottom: 20px;
+  }
+
+  .catalog__top {
+    margin-bottom: 20px;
   }
 
   .catalog__main {
@@ -4368,7 +4450,7 @@ img {
   /* events */
   .events {
     padding-top: 45px;
-    padding-bottom: 35px;
+    padding-bottom: 30px;
   }
 
   .events__bottom-slide {
@@ -4381,6 +4463,15 @@ img {
 
   .events__slide-title {
     margin-bottom: 5px;
+  }
+
+  .events__swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  .events__swiper-pagination .swiper-pagination-bullet:not(:last-child) {
+    margin-right: 10px;
   }
 
   /* projects */
@@ -4401,9 +4492,18 @@ img {
     left: 95.5%;
   }
 
+  .project__img {
+    padding: 0;
+  }
+
+  .project__img-1 {
+    max-width: 210px;
+    height: 52px;
+  }
+
   /* contacts */
   .contacts__main {
-    padding-top: 43px;
+    padding-top: 45px;
   }
 
   .contacts__form {
@@ -4414,10 +4514,14 @@ img {
         flex-wrap: wrap;
   }
 
+  .contacts__validate {
+    margin-bottom: 18px;
+  }
+
   .contacts__container-1,
   .contacts__container-2 {
     margin-right: 0;
-    margin-bottom: 15px;
+    margin-bottom: 0;
   }
 
   .contacts__container-1 {
@@ -4425,15 +4529,15 @@ img {
   }
 
   .contacts__container-2 {
-    margin-right: 18px;
+    margin-right: auto;
   }
 
   .contacts__btn-desktop {
-    margin-bottom: 24px;
+    margin-bottom: 10px;
   }
 
   .form-control {
-    width: 323px;
+    width: 320px;
     margin-bottom: 12px;
   }
 
@@ -4477,6 +4581,7 @@ img {
 
   /* header */
   .header__container-top {
+    padding-top: 12px;
     padding-bottom: 12px;
   }
 
@@ -4557,7 +4662,6 @@ img {
 
   .header__list {
     visibility: hidden;
-    margin-bottom: auto;
   }
 
   .header__list_active {
@@ -4727,7 +4831,11 @@ img {
   .gallery {
     overflow: hidden;
     padding-top: 50px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
+  }
+
+  .gallery__slide::before {
+    padding-top: 125%;
   }
 
   .gallery__left {
@@ -4774,10 +4882,18 @@ img {
   }
 
   .gallery__right-navigation {
-    margin-top: 20px;
+    margin-top: 25px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .swiper-button-prev {
+    margin-right: 10px;
+  }
+
+  .swiper-button-next {
+    margin-left: 10px;
   }
 
   .swiper-pagination-1 {
@@ -4786,11 +4902,15 @@ img {
 
   .modal {
     max-width: calc(100% - 30px);
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .modal-image-wrap {
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     width: 100%;
     min-height: auto;
     height: 200px;
@@ -4806,7 +4926,8 @@ img {
 
   .modal-content {
     padding: 20px 20px 25px 20px;
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     width: 100%;
   }
 
@@ -4841,9 +4962,14 @@ img {
   }
 
   .catalog__title {
+    margin-bottom: 0;
     font-weight: 400;
     font-size: 28px;
     line-height: 38px;
+  }
+
+  .catalog__top {
+    margin-bottom: 13px;
   }
 
   .catalog__descr {
@@ -4866,6 +4992,11 @@ img {
     font-weight: 600;
     font-size: 18px;
     line-height: 32px;
+  }
+
+  .accordion__content-wrap {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .head-icon {
